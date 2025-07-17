@@ -109,3 +109,18 @@ public class Abstractions{
         myCar.stop();
     }
 }
+
+
+// output 
+// bentley continental GT : Engine starts with a roar!
+// Current speed: 0 km/h
+// Sports car accelerating to 30 km/h
+// Current speed: 10 km/h
+// Sports car accelerating to 50 km/h
+// Current speed: 40 km/h
+// Sports car accelerating to 70 km/h
+// Current speed: 90 km/h
+// Current speed: 90 km/h
+// Sports car accelerating to 100 km/h
+// bentley continental GT : Braking! Speed is now 170 km/h
+// bentley continental GT : Engine turned off.
