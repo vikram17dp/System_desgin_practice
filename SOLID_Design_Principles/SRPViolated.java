@@ -1,5 +1,4 @@
 package SOLID_Design_Principles;
-
 import java.util.ArrayList;
 import java.util.List;
 
