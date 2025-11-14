@@ -1,0 +1,47 @@
+✅ S — Single Responsibility Principle (SRP)
+Definition
+
+A class should have one and only one reason to change.
+Meaning → each class must handle only one responsibility.
+
+If a class is doing multiple things, changes in one responsibility can break others → violating SRP.
+
+
+✅ Correct SRP Implementation
+
+Break responsibilities into separate classes:
+
+1. ShoppingCart → holds items & calculates total
+2. InvoicePrinter → prints invoice
+3. CartDBStorage → saves to DB
+4. Product → data object
+
+
+ASCII Diagram
+
+             +-------------------+
+             |     Product       |
+             |-------------------|
+             | price             |
+             | name              |
+             +---------^---------+
+                       |
+                (used by cart)(1 *** many)
+                       |
+           +-----------+------------+
+           |      ShoppingCart      |
+           |-------------------------|
+           | addProduct()           |
+           | calcTotalPrice()       |
+           +-----------+------------+
+                       |
+      +----------------+----------------+
+      |                                 |
++------------+                  +------------------+
+| Invoice    |                  |   CartDBStorage  |
+|  Printer   |                  |------------------|
+|------------|                  | saveToDB(cart)   |
+| print()    |                  +------------------+
++------------+
+
+
